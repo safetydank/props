@@ -1,0 +1,40 @@
+ppasm - an assembler for the Propeller microcontroller
+
+Features:
+
+* Compatible with Parallax assembler instruction set
+* Supports constant expressions
+* Object-oriented design is easily customizable
+* Runs on Windows, Linux and probably Mac OS X
+* Open source (MIT license)
+
+
+Standard directives
+
+org 0
+    Set the current cog address to 0
+
+fit <longs>
+    Ensure the preceding code section fits inside <longs> longs
+
+
+Extended directives
+
+The following directives are ppasm specific and not available in the Parallax
+assembler.
+
+.xinfreq <number>
+    Set the initial clock frequency
+
+.clkmode <mode>
+    Set the clock/PLL mode
+
+.horg <byte address>
+    Set the hub address of the subsequent section
+
+.hfit <byte address>
+    Ensure preceding section ends before given byte address
+
+
+Written by safetydank (github.com/safetydank)
+
